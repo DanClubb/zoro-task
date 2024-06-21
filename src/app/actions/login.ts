@@ -27,7 +27,7 @@ export async function Login(prevState: unknown, formData: FormData) {
 
     if (response.status === 500) {
         const data = await response.json();
-        return { authError: data.message };
+        return { authError: data.message as string };
     }
 
     redirect(`/${credentials.username}`);

@@ -4,7 +4,7 @@ import { useFormState, useFormStatus } from "react-dom";
 import { Login } from "../actions/login";
 
 export default function AuthForm() {
-    const [error, action] = useFormState(Login, {});
+    const [error, action] = useFormState(Login, { validationError: {} });
     return (
         <div>
             <form
