@@ -7,7 +7,6 @@ export default async function User({
     params: { username: string };
 }) {
     const userDetails = await fetchUserDetails(username);
-    console.log(userDetails);
     return (
         <div className="flex flex-col justify-center items-center w-full max-w-[745px] shadow-md rounded-lg mx-auto p-4">
             <h1 className="text-4xl mt-10">
