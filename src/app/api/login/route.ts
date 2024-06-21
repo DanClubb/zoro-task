@@ -1,14 +1,15 @@
 import { NextResponse } from "next/server";
 
+const userDetails = {
+    username: "danclubb",
+    password: "test123",
+};
+
 export async function POST(request: Request) {
-    const serverDetails = {
-        username: "danclubb",
-        password: "test123",
-    };
     const data = await request.json();
     if (
-        data.username === serverDetails.username &&
-        data.password === serverDetails.password
+        data.username === userDetails.username &&
+        data.password === userDetails.password
     ) {
         return NextResponse.json({ data }, { status: 200 });
     }

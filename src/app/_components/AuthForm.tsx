@@ -17,26 +17,23 @@ export default function AuthForm() {
                         Enter your username and password to access your account.
                     </p>
                 </header>
+
                 <FormInput type="text" name="username" />
                 <FormInput type="password" name="password" />
+
                 <SubmitButton />
             </form>
+
             <div className="h-10 flex items-center justify-center">
-                {error?.validationError?.username && (
-                    <p className="text-red-500 text-sm">
-                        Username {error.validationError?.username}
-                    </p>
-                )}
-                {error?.validationError?.password && (
-                    <p className="text-red-500 text-sm">
-                        Password {error.validationError?.password}
-                    </p>
-                )}
-                {error?.authError && (
-                    <p className="text-red-500 text-sm">
-                        Authentication failed
-                    </p>
-                )}
+                <p className="text-red-500 text-sm">
+                    {error?.validationError?.username &&
+                        `Username ${error.validationError?.username}`}
+
+                    {error?.validationError?.password &&
+                        `Password ${error.validationError?.password}`}
+
+                    {error?.authError && "Authentication failed"}
+                </p>
             </div>
         </div>
     );
