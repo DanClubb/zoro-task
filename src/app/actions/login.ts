@@ -17,7 +17,7 @@ export async function Login(prevState: unknown, formData: FormData) {
     }
 
     const credentials = result.data;
-    const response = await fetch("http://localhost:3000//api", {
+    const response = await fetch("http://localhost:3000/api/login", {
         method: "POST",
         body: JSON.stringify(credentials),
         headers: {
