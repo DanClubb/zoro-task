@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Zoro Task: Login and User Page
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project demonstrates a basic implementation of a login system using Next.js, Tailwind CSS, TypeScript, and MongoDB. The application includes a login page where users can enter their username and password, and upon successful authentication, they are redirected to a user page displaying some basic user information.
+
+## Setup and Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/DanClubb/zoro-task.git
+```
+
+```bash
+cd <repository-directory>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Set up environment variables:
+Create a .env.local file in the root directory and add the following variables:
+
+usually wouldn't have this public but the URI is: mongodb+srv://admin:yEPjP0WQ2VBAZR7N@cluster0.qnw1qai.mongodb.net/zoro
+
+```bash
+MONGODB_URI=<your-mongodb-uri>
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Constraints and Limitations
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Time Constraints: Due to limited time, the following features were not implemented:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+-   Tests: Automated tests (unit, integration, etc.) are not included.
+-   Secure Login: The login implementation is basic and lacks security measures.
 
-## Learn More
+## Future Improvements
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   Ability to create account through the auth form.
+-   Add Tests: Implement comprehensive testing to ensure the robustness of the application.
+-   Enhance Security: Improve the login system by adding encryption for storing passwords and using JWT for authorization.
